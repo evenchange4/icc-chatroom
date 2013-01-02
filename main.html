@@ -2,13 +2,50 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
-	<title>keakon' chat room</title>
+	<title>ICC's chatroom</title>
 	<style type="text/css">
 		#input { position: absolute; width: 45%; left: 50%; }
 		#content { width: 95%; }
 		#msg { position: absolute; top: 0; width: 45%; height: 100%; word-wrap: break-word; word-break: break-all; }
 		.top1em { margin-top: 1em; }
 		.top2em { margin-top: 2em; }
+		body{ 
+			background-image:url('retina_wood.png'); 
+			font-family: verdana, arial, helvetica, sans-serif;
+		}
+		#msg{
+			-moz-box-shadow:    inset 0 0 10px #000000;
+			-webkit-box-shadow: inset 0 0 10px #000000;
+			box-shadow:         inset 0 0 10px #000000;
+			margin-top: 5px;
+		}
+		#title{
+			bottom: 0px;
+			padding-top:130px; 
+			float:right;
+			text-shadow: white 2px 2px;
+		}
+		.btn-custom {
+			font-family: verdana, arial, helvetica, sans-serif;
+			font-size: 24px;
+
+			background-color: white;
+
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+
+			cursor: pointer;
+			float: right;
+			margin-right: 30px;
+		}
+		.top1em a{
+			padding-top: 340px;
+			text-decoration: none;
+		}
 	</style>
 	<script src="/_ah/channel/jsapi"></script>
 	<script src="/jquery.js"></script>
@@ -81,11 +118,11 @@
 </head>
 <body>
 	<div id="msg"></div>
-	<h3 style="padding-top:130px; float:right;">ICC2012-Chatroom</h3>
+	<h1 id='title'>ICC2012-多人即時聊天室</h1>
 
 	<div id="input">
 		<div><textarea id="content" rows="3" cols="60"></textarea></div>
-		<div class="top1em"><input type="button" value="submit" id="submit_msg"/> <a href="/login">登入</a></div>
+		<div class="top1em"><input type="button" value="submit" id="submit_msg" class='btn-custom'/> <a class='login' href="/login">登入</a></div>
 	</div>
 </body>
 </html>

@@ -67,7 +67,7 @@ class ReleaseTokenHandler(webapp.RequestHandler):
 					user_name = id.split('@')[0]
 				del tokens[token]
 				memcache.set('tokens', tokens)
-				message = user_name + ' has left the chat room.'
+				message = user_name + ' 離開了聊天室。'
 				message = simplejson.dumps(message)
 				broadcast(message, tokens)
 
@@ -85,7 +85,7 @@ class OpenHandler(webapp.RequestHandler):
 					user_name = 'anonymous(%s)' % id
 				else:
 					user_name = id.split('@')[0]
-				message = user_name + u' has joined the chat room.'
+				message = user_name + u' 加入了聊天室。'
 				message = simplejson.dumps(message)
 				broadcast(message, tokens)
 

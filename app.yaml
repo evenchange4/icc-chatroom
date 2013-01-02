@@ -20,6 +20,10 @@ handlers:
 - url: /
   static_files: main.html
   upload: main.html
+  
+- url: /retina_wood.png
+  static_files: retina_wood.png
+  upload: retina_wood.png
 
 - url: /jquery.js
   static_files: jquery.js
